@@ -1,15 +1,17 @@
-```
-Safe NetScaler CVE Validator (TXT)
 
-Visão geral
+## Safe NetScaler CVE Validator (TXT)
+
+## Visão geral
 Este repositório contém um script seguro e não-exploratório para triagem e validação inicial de sinais relacionados a CVEs em appliances Citrix NetScaler/ADC (ex.: CVE-2026-88771 e CVE-2026-88778). O objetivo é coletar evidências passivas (banners, cabeçalhos, snippets, TLS, timings) sem executar exploits, sem enviar comandos remotos e sem instruções de evasão de WAF ou firewall. Use apenas em ambientes com autorização explícita por escrito.
+
 
 Requisitos
 Arquivo requirements.txt sugerido:
+'''
 requests>=2.31.0
 urllib3>=1.26.0
 certifi>=2023.11.0
-
+'''
 Instalação rápida
 1. python3 -m venv .venv
 2. source .venv/bin/activate
@@ -111,4 +113,3 @@ The edge_all_open_tabs metadata provides important context about the user's brow
 
 Observação final
 Se desejar, eu gero também o arquivo requirements.txt, um exemplo fictício de report.json, ou adapto este README para inglês com badges e instruções de CI.
-```
