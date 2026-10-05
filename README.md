@@ -7,7 +7,7 @@ Este repositório contém um script seguro e não-exploratório para triagem e v
 
 Requisitos
 Arquivo requirements.txt sugerido:
-'''
+
 requests>=2.31.0
 urllib3>=1.26.0
 certifi>=2023.11.0
@@ -51,6 +51,14 @@ Flags principais
 
 3) Executando requisições reais (apenas em ambiente autorizado)
 Para executar requisições reais somente após confirmar autorização, passe --confirm:
+
+python3 /tmp/safe_netscaler_validator.py
+usage: safe_netscaler_validator.py [-h] --target TARGET [--endpoints ENDPOINTS] [--timeout TIMEOUT]
+                                   [--attempts ATTEMPTS] [--output OUTPUT] [--version-patterns VERSION_PATTERNS]
+                                   [--whitelist WHITELIST] [--dry-run] [--confirm] [--log-level LOG_LEVEL]
+                                   [--json-log]
+safe_netscaler_validator.py: error: the following arguments are required: --target
+
 
 Exemplo:
 python3 safe_netscaler_validator.py --target https://10.0.0.5 --endpoints /vpn/index.html --output resultado.json --confirm
